@@ -1,4 +1,7 @@
-<mat-card>
+<mat-card (click)="openModal()">
   <mat-card-header> {{ boss.name }}</mat-card-header>
   <img mat-card-image src="/assets/bosses/{{ boss.name }}.gif" />
+  <mat-card-content>
+    <div>Last time checked: {{ getTime() }}</div>
+  </mat-card-content>
 </mat-card>

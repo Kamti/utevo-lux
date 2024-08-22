@@ -4,13 +4,7 @@ export interface BossInfo {
   lastDayKilled: number;
   lastDayPlayersKilled: number;
   locations: Location[];
-  fixedDaysFrequency: FixedDaysFrequency;
-  minutesBeforePoof: number;
-}
-
-export interface FixedDaysFrequency {
-  min: string;
-  max: number;
+  respawn: Respawn;
 }
 
 export class Location {
@@ -22,5 +16,24 @@ export class Location {
     this.name = name;
     this.movieUrl = movieUrl;
     this.mapUrl = mapUrl;
+  }
+}
+
+export class Respawn {
+  daysFrequencyMin: number;
+  daysFrequencyMax: number;
+  minutesBeforePoof: number;
+  spawnLocations: number;
+
+  constructor(
+    daysFrequencyMin: number,
+    daysFrequencyMax: number,
+    minutesBeforePoof: number,
+    spawnLocations: number
+  ) {
+    this.daysFrequencyMin = daysFrequencyMin;
+    this.daysFrequencyMax = daysFrequencyMax;
+    this.minutesBeforePoof = minutesBeforePoof;
+    this.spawnLocations = spawnLocations;
   }
 }

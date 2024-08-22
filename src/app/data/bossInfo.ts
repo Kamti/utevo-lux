@@ -3,16 +3,6 @@ import { Location } from './../pages/bosses/model/boss-info';
 
 export type BossConstLocation = { [key: BossToken]: Location };
 
-export class FixedDaysFrequency {
-  min: number;
-  max: number;
-
-  constructor(min: number, max: number) {
-    this.min = min;
-    this.max = max;
-  }
-}
-
 export const constBossLocation: Record<BossToken, Location[]> = {
   'Rotworm Queen': new Array(
     new Location(

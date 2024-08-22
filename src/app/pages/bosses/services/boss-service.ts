@@ -5,6 +5,7 @@ import { constTokens } from 'src/app/data/bosses';
 import { Entry, KillStatisticResponse } from '../model/kill-statistic-response';
 import { BossInfo } from '../model/boss-info';
 import { constBossLocation } from 'src/app/data/bossInfo';
+import { constBossRespawn } from 'src/app/data/bossRespawnInfo';
 
 @Injectable({
   providedIn: 'root',
@@ -31,6 +32,7 @@ export class BossService {
               lastDayKilled: killStats?.last_day_killed ?? 0,
               lastDayPlayersKilled: killStats?.last_day_players_killed ?? 0,
               locations: constBossLocation[boss],
+              respawn: constBossRespawn[boss],
             } as BossInfo);
           }
           console.log(bosses);

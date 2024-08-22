@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+      <img src="/assets/bosses/{{ boss.name }}.gif" />
+    </div>
+    <div class="col-6">
+      <h2>{{ boss.name }}</h2>
+      <h5>
+        {{ getRespawnFrequencyText() }}
+      </h5>
+    </div>
+  </div>
+  <mat-dialog-content>
+    <button mat-button (click)="setCheckedTime()">Add</button>
+  </mat-dialog-content>
+</div>
