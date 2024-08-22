@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row g-2">
+    <ng-container *ngFor="let boss of bosses; let i = index">
+      <div class="col-3">
+        <app-boss-tile [boss]="boss"></app-boss-tile>
+      </div>
+    </ng-container>
+  </div>
+</div>
