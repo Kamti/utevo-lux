@@ -1,7 +1,10 @@
-<mat-card (click)="openModal()">
+<mat-card
+  (click)="openModal()"
+  [ngStyle]="{ 'background-color': this.colorRgb.GetRgb() }"
+>
   <mat-card-header> {{ boss.name }}</mat-card-header>
   <img mat-card-image src="/assets/bosses/{{ boss.name }}.gif" />
   <mat-card-content>
-    <div>Last time checked: {{ getTime() }}</div>
+    <div>Last time checked: {{ timeText }}</div>
   </mat-card-content>
 </mat-card>
